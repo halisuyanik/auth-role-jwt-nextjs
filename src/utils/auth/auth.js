@@ -8,8 +8,8 @@ export async function verifyJwtToken(token){
     }
 }
 
-const getJwtSecretKey=()=>{
-    const jwtSecretKey=process.env.JWT_SECRET_KEY;
+export function getJwtSecretKey(){
+    const jwtSecretKey=process.env.NEXT_PUBLIC_JWT_SECRET_KEY;
     if(!jwtSecretKey){
         throw new Error('jwt secret key in not available');
     }
